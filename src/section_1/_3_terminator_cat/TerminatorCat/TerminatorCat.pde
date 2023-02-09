@@ -2,21 +2,23 @@
 //    into your processing window
 
 PImage cat;
-int x=0;
-int y=0;
+int x=183;
+int y=196;
+int X2=284;
+int Y2=190;
 
 void setup() {
 
 // 2. Change "cat.jpg" to match the name of the image you selected
-cat = loadImage("cat.jpg");
+cat = loadImage("cat5.jpeg");
 
 // 3. Set the size of the sketch.
-
+size(500,500);
 // 4. Resize the cat so it is the same size as the sketch
-
+cat.resize(500,500);
 // 5. DRAW CAT. Use the background() command to make the cat the background.
 //
-
+background(cat);
 
   }
 
@@ -35,24 +37,42 @@ void draw() {
 noStroke();
 
 // 8.  COLOR.  Use the fill() command to set the color of your ellipse to the laser color you want.
-
+fill(#5F23B4);
 // 9. Use the ellipse() command to draw a circle on the eye (you will have to guess its size).
 //    Use the x and y variables you just created to place the ellipse in the correct location.
 //                  The ellipse command looks like this:
-                ellipse(x, y, width, height);
+                ellipse(x, y, 50, 30);
+                ellipse(X2, Y2, 50, 30);
+                
+                if(x>width && y>height&&X2>width&&Y2>height);{
+                  x=183;
+                  y=196;
+                };
+                  
+                  if(X2>width&&Y2>height);{
+                    X2=284;
+                    Y2=190;
+                  };
+                  
 // Run the program to make sure it is in the right place and is the right size.
 }
 
 // 10.  LASER BEAM.  This code will make your ellipse move down and to the right 
 //      when you press the space bar. 
 void keyPressed() {
-    x+=1;
-    y+=1;
-
+    x+=7;
+    y+=7;
+   
+    
+    X2+=7;
+    Y2+=7;
 // 12.  If you want them to go faster, add more than one each time the key is pressed
 }
 
 
 //13.   Now make the cat shoot lasers from the other eye.
+
+
+
 
 //14.  Set the laser back to the beginning when it goes off the screen.

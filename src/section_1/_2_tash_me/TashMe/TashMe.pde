@@ -48,4 +48,4 @@ background(face);
  //    11. Draw a hat when the right mouse button is pressed. USE THIS CODE:
  //              if (mouseButton == RIGHT)  {     }
 
-}
+}if (mouseButtom == RIHGT)
